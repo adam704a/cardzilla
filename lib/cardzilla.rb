@@ -145,8 +145,8 @@ class Cardzilla
     elsif self.check_one_pair
       return "one pair"
       
-    else self.check_high_card
-      return "high card"   
+    else 
+      return self.check_high_card
     end
   end
   
@@ -304,7 +304,35 @@ class Cardzilla
   
 
   def check_high_card
-    return false
+    if aces.length > 0
+      return "ace"
+    elsif kings.length > 0
+      return "king"
+    elsif queens.length > 0
+      return "queen"
+    elsif jacks.length > 0
+      return "jack"
+    elsif tens.length > 0
+      return "ten"
+    elsif nines.lenth > 0
+      return "nine"
+    elsif eights.length > 0
+      return "eight"
+    elsif sevens.length > 0
+      return "seven"
+    elsif sixes.length > 0
+      return "six"
+    elsif fives.length > 0
+      return "five"
+    elsif fours.length > 0
+      return "four"
+    elsif threes.length > 0
+      return "three"
+    elsif twos.length > 0
+      return "two"
+    else
+      return "bad card"
+    end  
   end
   
   def check_n_of_a_kind(n)

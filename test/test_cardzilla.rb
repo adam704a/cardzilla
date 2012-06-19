@@ -59,7 +59,7 @@ class CardzillaTest < Test::Unit::TestCase
   
   def test_high_card
     hand = ['Jd','3h','4s','9c','2c']
-    assert_equal "high card",
+    assert_equal "jack",
       Cardzilla.new(hand).get_best_hand
   end
   
